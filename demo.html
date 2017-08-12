@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title> Textarea with line numbers </title>
     <style type="text/css">
+        /* none of this truly matters, except maybe the wrapper size */
         body{text-align:center}
         h1,button{margin:25px;}
         label,input{margin:0;vertical-align:middle;}
@@ -13,8 +14,8 @@
         content:"wrapper";text-transform: uppercase;left:0px;
         position:absolute;top:-18px;font-size:16px;color:red; }
     </style>
-    <link rel="stylesheet" type="text/css" href="./tln.css"/>
-    <script type="text/javascript" src="./tln.js"></script>
+    <link rel="stylesheet" type="text/css" href="./tln.min.css"/>
+    <script type="text/javascript" src="./tln.min.js"></script>
 </head>
 <body>
     <h1> Example </h1>
@@ -23,11 +24,11 @@
         <textarea id="test" class="banana-cake"></textarea>
     </div>
     <label>
-        Width
+        Width:
         <input oninput="wrapper.style.width=this.value+'px';" type="range" value="500" min="100" max="700" />
     </label>
     <label>
-        Height
+        Height:
         <input oninput="wrapper.style.height=this.value+'px';" type="range" value="500" min="100" max="700" />
     </label>
 </body>
