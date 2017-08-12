@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> Textarea with line numbers </title>
+    <style type="text/css">
+        body{text-align:center}
+        h1,button{margin:25px;}
+        label,input{margin:0;vertical-align:middle;}
+        #wrapper{border:1px solid red;position:relative;
+        height:500px;width:500px;margin:15px auto}
+        #wrapper::before {
+        content:"wrapper";text-transform: uppercase;left:0px;
+        position:absolute;top:-18px;font-size:16px;color:red; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./tln.css"/>
+    <script type="text/javascript" src="./tln.js"></script>
+</head>
+<body>
+    <h1> Example </h1>
+    <button onclick="append_line_numbers('test');this.disabled=!0"> NUMBERIFY! </button>
+    <div id="wrapper">
+        <textarea id="test" class="banana-cake"></textarea>
+    </div>
+    <label>
+        Width
+        <input oninput="wrapper.style.width=this.value+'px';" type="range" value="500" min="100" max="700" />
+    </label>
+    <label>
+        Height
+        <input oninput="wrapper.style.height=this.value+'px';" type="range" value="500" min="100" max="700" />
+    </label>
+</body>
+</html>
